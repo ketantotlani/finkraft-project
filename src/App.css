@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: "Calibri";
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  border-spacing: 0;
+  border: 1px solid #d1cccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr:last-child td {
+  border-bottom: 0;
+}
+
+th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #d1cccc;
+  border-right: 1px solid #d1cccc;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+tr:nth-child(odd) {
+  background: #f3f3f3;
+  color: #000000;
+}
+
+tr:nth-child(even) {
+  background: #ffffff;
+  color: #000000;
+}
+
+th.desc {
+  border-bottom: 5px solid rgb(136, 136, 255);
+}
+
+th.asc {
+  border-top: 5px solid orange;
+}
+thead th{
+  cursor: pointer;
+}
+
+
+
+#container {
+  margin: 1rem;
+}
+
+.items {
+  margin-bottom: 1rem;
+}
+
+.arrow img{
+  height: 10px;
 }
